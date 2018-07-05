@@ -1,0 +1,393 @@
+body {
+  background-color: #222;
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gameBoard {
+  margin: 0 auto;
+  margin-top: 50px;
+  border: solid 30px black;
+  box-shadow: -10px 10px 7px 0px rgba(5, 5, 5, 0.50);
+  width: 500px;
+  height: 500px;
+  border-radius: 500px;
+}
+
+.quadrant {
+  margin: 0;
+  float: left;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  z-index: 8;
+  border: 5px solid black;
+}
+
+.green {
+    -moz-border-radius: 300px 0 0 0;
+    border-radius: 300px 0 0 0;  
+    background-color: darkgreen;
+   -moz-box-shadow:    inset 0 0 100px #000000;
+   -webkit-box-shadow: inset 0 0 100px #000000;
+   box-shadow:         inset 0 0 100px #000000;
+}
+
+.red {
+  -moz-border-radius: 0 300px 0 0;
+  border-radius: 0 300px 0 0;
+   background-color: darkred;
+  -moz-box-shadow:    inset 0 0 100px #000000;
+  -webkit-box-shadow: inset 0 0 100px #000000;
+   box-shadow:        inset 0 0 100px #000000;
+}
+
+.yellow {
+  -moz-border-radius: 0 0 0 300px;
+   border-radius: 0 0 0 300px;
+   background-color:  #daa520;
+   -moz-box-shadow:    inset 0 0 100px #000000;
+   -webkit-box-shadow: inset 0 0 100px #000000;
+   box-shadow:         inset 0 0 100px #000000;
+}
+
+.blue {
+  -moz-border-radius: 0 0 300px 0;
+  border-radius: 0 0 300px 0;
+  background-color: darkblue;
+   -moz-box-shadow:    inset 0 0 100px #000000;
+   -webkit-box-shadow: inset 0 0 100px #000000;
+   box-shadow:         inset 0 0 100px #000000;
+}
+
+.controlPanel {
+  border: 20px solid black;
+  height: 205px;
+  width: 205px;
+  border-radius: 150px;
+  background-color: #000;
+  clear: both;
+  position: absolute;
+  z-index: 10;
+  margin-top: 130px;
+  margin-left: 130px;
+}
+
+.nameBrand {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.display {  
+  margin: 0px;
+  margin-left: 25px;
+  border: solid 2px gray;
+  border-radius: 10px;
+  width: 55px;
+  height: 50px;
+  font-size: 38px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+    text-shadow: 0px 0px 10px red,
+               0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 50px red,
+    0px 0px 60px red,
+    0px 0px 70px red; 
+
+}
+
+.redLED {
+background-color: #FF0000;
+box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+  margin: 0px;
+  margin-left: 1px;
+  line-height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.yellowLED, .strictMode {
+  margin: 0px;
+  margin-left: 25px;
+  line-height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+background-color: yellow;
+box-shadow: #000 0 -1px 7px 1px, inset yellow 0 -1px 9px, yellow 0 2px 12px;
+}
+
+.greenLED {
+    margin: 0px; 
+    margin-left: 25px;
+    line-height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #07E800;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+.greenpowerLED {
+    margin: 0px; 
+    margin-left: 1px;
+    line-height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #07E800;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+.label1 {
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+  margin: 0px;
+  margin-top: 1px;
+  background-color: transparent;
+  color: #fff;
+}
+.label2 {
+font-size: 12px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+  margin: 0px;
+  margin-left: 15px;
+  margin-top: 1px;
+ 
+}
+.label3 {
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+  margin: 0px;
+  margin-left: 15px;
+  margin-top: 1px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.green-active {
+  background-color: #19ff1f !important;
+  color: #fff;
+  box-shadow: 0px 0px 10px green,
+               0px 0px 20px green,
+    0px 0px 30px green,
+    0px 0px 40px green,
+    0px 0px 50px green,
+    0px 0px 60px green,
+    0px 0px 70px green; 
+}
+
+.red-active {
+  background-color: #ff001d !important;
+  color: #fff;
+  box-shadow: 0px 0px 10px red,
+               0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 50px red,
+    0px 0px 60px red,
+    0px 0px 70px red; 
+  
+}
+
+.yellow-active {
+  background-color: #edff00 !important;
+  color: #fff;
+  box-shadow: 0px 0px 10px gold,
+               0px 0px 20px gold,
+    0px 0px 30px gold,
+    0px 0px 40px gold,
+    0px 0px 50px gold,
+    0px 0px 60px gold,
+    0px 0px 70px gold;
+}
+
+.blue-active {
+  background-color: #00b7ff !important;
+  color: #fff;
+  box-shadow: 0px 0px 10px blue,
+               0px 0px 20px blue,
+    0px 0px 30px blue,
+    0px 0px 40px blue,
+    0px 0px 50px blue,
+    0px 0px 60px blue,
+    0px 0px 70px blue; 
+}
+
+
+#start, #restart {
+  vertical-align: middle;
+  border-radius: 100%;
+  border: 2px solid black;
+  background: #19361e;
+  color: #4bd763;
+  font-size: 1em;
+  margin-left: 2px;
+}
+
+.infoBox {
+  margin: 0px;
+  margin-top: 10px;
+  border: solid 2px #19361e;
+  border-radius: 10px;
+  width: 165px;
+  height: 30px;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  color: #4bd763;
+  text-align: center;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 640px) {
+	.gameBoard{
+		width: 320px;
+		height: 320px;
+	}
+  .green {
+		width: 152px;
+		height: 152px;
+		border-radius: 150px 0px 0px 0px;
+		
+	}
+  
+  .red {  
+    top: -160px;
+    left: 160px;
+		width: 152px;
+		height: 152px;
+		border-radius: 0px 150px 0px 0px; 
+
+	}	
+	
+	.blue{
+    bottom: 320px;
+    left: 160px;
+    width: 152px;
+		height: 152px;
+		border-radius: 0px 0px 150px 0px;
+
+	}
+	.yellow{
+    bottom: 160px;
+		width: 152px;
+		height: 152px;
+		border-radius: 0px 0px 0px 150px;
+
+	}
+
+	.controlPanel{
+		width: 110px;
+		height: 110px;
+    top: 39px;
+		left: -4px;
+	}
+
+.nameBrand{
+    position: absolute;
+		top: -20px;
+		left: 15px;
+    font-size: 1.5em;
+	}
+  #restart {
+    position: absolute;
+		top: 100px;
+    left: 50px;
+    font-size: 0.8em;
+	}
+  
+  #start {
+    position: absolute;
+		top: 100px;
+    left: 10px;
+    font-size: 0.8em;
+	}
+
+  .label1 {
+		font-size: 0.5em;
+	  left: -15px;
+    position: absolute;
+    top: 45px;
+	}
+  
+   .label2 {
+		font-size: 0.6em;
+	  left: 20px;
+    position: absolute;
+    top: 54px;
+	}
+  
+   .label3 {
+		font-size: 0.5em;
+    position: absolute;
+    top: 45px;
+    left: 60px;
+	}
+  .redLED, .greenpowerLED {
+		width: 14px;
+		height: 14px;
+    position: absolute;
+	  top: 25px;
+		left: 2px;
+	}
+  #displayer {
+		width: 30px;
+		height: 40px;
+		border-width: 1px;
+		font-size: 2em;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+	}
+  
+  .strictMode{
+		width: 14px;
+		height: 14px;
+    position: absolute;
+	  top: 25px;
+		left: 65px;
+	}
+	.infoBox {
+		width: 90px;
+		height: 20px;
+    position: absolute;
+		top: 60px;
+		left: 10px;
+    font-size: 0.8em;
+	}
+
+}  
